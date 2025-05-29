@@ -1,0 +1,45 @@
+---
+import IconAdaptabilidad from "./icons/softSkills/IconAdaptabilidad.astro";
+import IconAprendizaje from "./icons/softSkills/IconAprendizaje.astro";
+import IconComunicacion from "./icons/softSkills/IconComunicacion.astro";
+import IconGestionTiempo from "./icons/softSkills/IconGestionTiempo.astro";
+import IconPensamientoCritico from "./icons/softSkills/IconPensamientoCritico.astro";
+import IconResolucionProblemas from "./icons/softSkills/IconResolucionProblemas.astro";
+import IconTrabajoEquipo from "./icons/softSkills/IconTrabajoEquipo.astro";
+import IconProactividad from "./icons/softSkills/IconProactividad.astro";
+
+const SOFT_SKILLS = [
+  { name: "Comunicación efectiva", icon: IconComunicacion },
+  { name: "Trabajo en equipo", icon: IconTrabajoEquipo },
+  { name: "Pensamiento crítico", icon: IconPensamientoCritico },
+  { name: "Gestión del tiempo", icon: IconGestionTiempo },
+  { name: "Adaptabilidad", icon: IconAdaptabilidad },
+  { name: "Resolución de problemas", icon: IconResolucionProblemas },
+  { name: "Proactividad", icon: IconProactividad },
+  { name: "Aprendizaje continuo", icon: IconAprendizaje },
+];
+---
+
+<section class="mt-16">
+  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+    {
+      SOFT_SKILLS.map((skill) => (
+        <div class="flex flex-col items-center justify-center aspect-square p-4 rounded-xl mt-5
+                    bg-gray-200 dark:bg-gray-800 
+                    text-gray-800 dark:text-white 
+                    shadow-sm 
+                    hover:shadow-lg hover:shadow-cyan-500/40 
+                    dark:hover:shadow-purple-500/40
+                    transition-all duration-300 transform hover:-translate-y-1 
+                    hover:bg-gray-300 dark:hover:bg-gray-700">
+          <div class="w-12 h-12 mb-2 flex items-center justify-center">
+            <skill.icon />
+          </div>
+          <span class="text-base font-semibold text-center">{skill.name}</span>
+        </div>
+      ))
+    }
+  </div>
+  
+</section>
+

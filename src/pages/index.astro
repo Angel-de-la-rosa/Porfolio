@@ -1,0 +1,76 @@
+---
+import Layout from "@/layouts/Layout.astro"
+
+import AboutMe from "@/components/AboutMe.astro"
+import Briefcase from "@/components/icons/Briefcase.astro"
+import CodeIcon from "@/components/icons/Code.astro"
+import Experience from "@/components/Experience.astro"
+import ProfileCheck from "@/components/icons/ProfileCheck.astro"
+import Projects from "@/components/Projects.astro"
+import SectionContainer from "@/components/SectionContainer.astro"
+import Hero from "@/components/Hero.astro"
+import TitleSection from "@/components/TitleSection.astro"
+import Education from "@/components/Education.astro"
+import EducationIcon from "@/components/icons/EducationIcon.astro" 
+import Skills from "@/components/Skills.astro"
+import SkillsIcon from "@/components/icons/Skill.astro"
+import SoftSkills from "@/components/SoftSkills.astro"
+import SoftSkillsIcon from "@/components/icons/SoftSkills.astro"
+---
+
+<Layout
+  title="Porfolio de Angel de la Rosa"
+  description="Contrata a angel para crear tu aplicación web. Desarrollador Web. Especializado en crear aplicaciones web."
+>
+  <main class="px-4">
+    <SectionContainer class="py-16 md:py-36">
+      <Hero>
+      </slot>
+    </Hero>
+    </SectionContainer>
+    <div class="space-y-24">
+    <SectionContainer id="experiencia">
+      <TitleSection>
+        <Briefcase class="size-8" />
+        Experiencia laboral
+      </TitleSection>
+      <Experience />
+    </SectionContainer>
+    <SectionContainer id="educacion">
+      <TitleSection>
+        <EducationIcon class="size-7" />
+        Educación / Titulaciones
+      </TitleSection>
+      <Education />
+    </SectionContainer>
+    <SectionContainer id="skills">
+      <TitleSection>
+        <SkillsIcon class="size-7" />
+        Skills
+      </TitleSection>
+      <Skills />
+    </SectionContainer>
+    <SectionContainer id="softskills">
+      <TitleSection>
+        <SoftSkillsIcon class="size-7" />
+        Soft Skills
+      </TitleSection>
+      <SoftSkills />
+    </SectionContainer>
+    <SectionContainer id="proyectos">
+      <TitleSection>
+        <CodeIcon class="size-7" />
+        Proyectos
+      </TitleSection>
+      <Projects />
+    </SectionContainer>
+    <SectionContainer id="sobre-mi">
+      <TitleSection>
+        <ProfileCheck class="size-8" />
+        Sobre mí
+      </TitleSection>
+      <AboutMe />
+    </SectionContainer>
+  </div>
+  </main>
+</Layout>

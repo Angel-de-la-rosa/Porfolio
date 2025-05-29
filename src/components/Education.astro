@@ -1,0 +1,61 @@
+---
+import SectionContainer from "../components/SectionContainer.astro"
+import EducationItem from "../components/EducationItem.astro"
+
+const EDUCATION = [
+  {
+    date: "2025 - actualmente ",
+    title: "curso fullstack developer c# y angular",
+    institution: "Tajamar",
+    description: "Formación intensiva en C#, backend y frontend.",
+    
+  },
+  {
+    date: "2022 - 2024",
+    title: "Grado superior en desarrollo de aplicaciones web",
+    institution: "IES Palomeras Vallecas",
+    description: "Fundamentos de programación, estructuras de datos, redes y sistemas operativos."
+  },
+  {
+    date: "2020 - 2022",
+    title: "Grado medio en sistemas microinformaticos y redes",
+    institution: "IES Luis Braille",
+    description: "Configuración de redes, protocolos de enrutamiento, y seguridad básica de redes.",
+    
+  }
+  ,
+  {
+    date: "2019 - 2020",
+    title: "curso de programacion de videojuegos con unreal engine",
+    institution: "MasterD",
+    description: "creacion de videojuegos con unreal engine, fundamentos de programacion y diseño de niveles.",
+    
+  },
+  {
+    date: "2019 - 2019",
+    title: "certificado MTA 96-366",
+    institution: "Microsoft",
+    description: "Configuración de redes, protocolos de enrutamiento, y seguridad básica de redes.",
+    
+  },
+  {
+    date: "2018 - 2018",
+    title: "ECDL",
+    institution: "MasterD",
+    description: "Certificación que acredita habilidades básicas y avanzadas en el uso de herramientas informáticas y digitales, garantizando un manejo profesional de software común y tecnologías digitales.",
+    
+  },
+]
+---
+
+
+    <ol class="relative mt-16">
+      {
+        EDUCATION.map((item) => (
+          <li>
+            <EducationItem {...item} />
+          </li>
+        ))
+      }
+    </ol>
+

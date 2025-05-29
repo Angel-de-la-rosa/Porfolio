@@ -1,0 +1,58 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCE = [
+  {
+    date: "marzo 2025 - abril 2025",
+    title: "tester",
+    company: "RFE",
+    description:
+      "responsable de las pruebas de hardware y software en equipo de telecomunicaciones militares.",
+
+  },
+  {
+    date: "enero 2025 - abril 2025",
+    title: "full stack developer",
+    company: "Freelance",
+    description:
+      "desarrollando funciones de back end y front end en aplicación de arquitectura.",
+  },
+  {
+    date: "marzo 2024 - julio 2024",
+    title: "back-end developer",
+    company: "Plexutech",
+    description:
+      "desarrollando microservicios en java con springboot para la banca y realizacion de test unitarios con junit y mockito.",
+    },
+    {
+      date: "marzo 2022 - junio 2022",
+      title: "wordpress developer",
+      company: "OnDigital Marketing",
+      description:
+        "desarrollo de sitios web con wordpress, diseño de temas y plugins personalizados, como parte del kit digital.",
+    },
+  {
+    date: "agosto 2021 - febrero 2024",
+    title: "vendedor informatica / tecnico informatico",
+    company: "Mediamarkt Iberia",
+    description:
+      "funciones de ventas y soporte tecnico, realizando instalaciones de pc y otros dispositivos, y reparaciones de hardware y software.",
+  },
+  {
+    date: "julio 2018 - marzo 2019",
+    title: "tecnico informatico",
+    company: "MasterD",
+    description:
+      "mantenimiento y reparacion de equipos informaticos, instalaciones de pc y otros dispositivos, y soporte tecnico.",
+  },
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>

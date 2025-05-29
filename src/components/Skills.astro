@@ -1,0 +1,75 @@
+---
+import React from "./icons/React.astro";
+import JavaScript from "./icons/JavaScript.astro";
+import HTML from "./icons/Html.astro";
+import CSS from "./icons/css.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import NodeJS from "./icons/Nodejs.astro";
+import Sql from "./icons/Sql.astro";
+import Java from "./icons/Java.astro";
+import Csharp from "./icons/CSharp.astro";
+import Astronauta from "./icons/Astronauta.astro";
+
+const FRONTEND_SKILLS = [
+  { name: "HTML", icon: HTML },
+  { name: "CSS", icon: CSS },
+  { name: "JavaScript", icon: JavaScript },
+  { name: "React", icon: React },
+  { name: "Tailwind", icon: Tailwind },
+  { name: "Astro", icon: Astronauta },
+];
+
+const BACKEND_SKILLS = [
+  { name: "Node.js", icon: NodeJS },
+  { name: "SQL", icon: Sql },
+  { name: "Java", icon: Java },
+  { name: "C#", icon: Csharp },
+];
+---
+
+<section class="space-y-16">
+  <h2 class="text-3xl font-bold mb-6">FRONT END</h2>
+  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+    {
+      FRONTEND_SKILLS.map((skill) => (
+        <div class="flex flex-col items-center justify-center aspect-square p-4 rounded-xl
+                    bg-gray-200 dark:bg-gray-800 
+                    text-gray-800 dark:text-white 
+                    shadow-sm 
+                    hover:shadow-lg hover:shadow-cyan-500/40 
+                    dark:hover:shadow-purple-500/40
+                    transition-all duration-300 transform hover:-translate-y-1 
+                    hover:bg-gray-300 dark:hover:bg-gray-700">
+          <div class="w-12 h-12 mb-2 flex items-center justify-center">
+            <skill.icon />
+          </div>
+          <span class="text-base font-semibold text-center">{skill.name}</span>
+        </div>
+      ))
+    }
+  </div>
+  
+  <h2 class="text-3xl font-bold mb-6">BACK END</h2>
+  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+    {
+      BACKEND_SKILLS.map((skill) => (
+        <div class="flex flex-col items-center justify-center aspect-square p-4 rounded-xl
+                    bg-gray-200 dark:bg-gray-800 
+                    text-gray-800 dark:text-white 
+                    shadow-sm 
+                    hover:shadow-lg hover:shadow-cyan-500/40 
+                    dark:hover:shadow-purple-500/40
+                    transition-all duration-300 transform hover:-translate-y-1 
+                    hover:bg-gray-300 dark:hover:bg-gray-700">
+          <div class="w-12 h-12 mb-2 flex items-center justify-center">
+            <skill.icon />
+          </div>
+          <span class="text-base font-semibold text-center">{skill.name}</span>
+        </div>
+      ))
+    }
+  </div>
+  
+  
+  
+</section>
